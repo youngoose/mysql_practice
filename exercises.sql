@@ -7,12 +7,16 @@ FROM books;
 
 
 SELECT 
-    author_lname AS forwards, REVERSE(author_lname) AS backwards 
+    author_lname AS forwards, 
+    REVERSE(author_lname) AS backwards 
 FROM books;
 
 
 SELECT 
-    UPPER(CONCAT(author_fname, ' ', author_lname)) AS 'full name in caps' 
+    UPPER
+    (
+        CONCAT(author_fname, ' ', author_lname)
+    ) AS 'full name in caps' 
 FROM books;
 
 
